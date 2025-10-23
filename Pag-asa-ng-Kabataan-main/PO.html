@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs & Opportunities | PNK</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <h1>
+      <img src="img/logo.png" alt="Pag-asa ng Kabataan Logo" style="width: 100px; height: auto;">
+      Pag-asa ng Kabataan
+    </h1>
+    <nav>
+      <a href="Home.html">Home</a> |
+      <a href="AboutUs.html">About</a> |
+      <a href="PO.html">Projects and Opportunities</a> |
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Programs and Opportunities -->
+  <section class="programs-section">
+    <div class="banner">
+      <div class="banner-text">
+        <h1>PROGRAMS AND<br>OPPORTUNITIES</h1>
+      </div>
+      <div class="banner-image">
+        <img src="img/image 4.png" alt="Graduation Cap" />
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="program-card">
+        <img src="image 1.png" alt="CHED Logo" class="program-img" />
+        <div class="program-text">
+          <h2>Commission on Higher Education (CHED)</h2>
+          <p>
+            The CHED Merit Scholarship Program (CMSP) for the 2025–2026 academic year was open for incoming first-year college students, with an application deadline of June 20, 2025, according to several Facebook posts from May and June 2025.
+            Benefits include up to ₱120,000 per academic year for private institutions or ₱80,000 for public institutions.
+          </p>
+          <a href="https://governmentph.com/ched-online-application/" target="_blank">
+  <button class="learn-btn">Learn more</button>
+</a>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="img/DOST.png" alt="DOST Logo" class="program-img" />
+        <div class="program-text">
+          <h2>Department of Science and Technology (DOST)</h2>
+          <p>
+            The DOST Scholarship is a program by the Philippine Department of Science and Technology (DOST) and supports future scientists, engineers, and innovators through academic assistance and career opportunities.
+          </p>
+          <a href="https://governmentph.com/dost-scholarship-online/" target="_blank">
+  <button class="learn-btn">Learn more</button>
+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Ongoing Projects -->
+  <section class="projects-section">
+    <div class="overlay">
+      <h1>Ongoing Projects</h1>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Leadership Workshop 2025</td>
+            <td>Training youth on leadership & teamwork</td>
+            <td>Ongoing</td>
+            <td><button class="action-btn">Join Now</button></td>
+          </tr>
+          <tr>
+            <td>Community Outreach Drive</td>
+            <td>Providing school supplies, health services, and feeding programs in barangays</td>
+            <td>Enrolling</td>
+            <td><button class="action-btn">Register</button></td>
+          </tr>
+          <tr>
+            <td>Green Youth Campaign</td>
+            <td>Tree planting, clean-up drives, and climate change awareness</td>
+            <td>Ongoing</td>
+            <td><button class="action-btn">Join Now</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <div id="joinModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Join Project</h2>
+      <form id="joinForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="school">School:</label>
+        <input type="text" id="school" name="school" required>
+
+        <label for="schoolId">School ID:</label>
+        <input type="text" id="schoolId" name="schoolId" required>
+
+        <div class="modal-buttons">
+          <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+          <button type="submit" class="join-btn">Join Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const modal = document.getElementById("joinModal");
+    const closeBtn = document.querySelector(".close");
+    const cancelBtn = document.getElementById("cancelBtn");
+    const form = document.getElementById("joinForm");
+
+    // Open modal when "Join Now" or "Register" buttons are clicked
+    document.querySelectorAll(".action-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close modal when clicking X or Cancel
+    closeBtn.onclick = cancelBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    // Close when clicking outside modal
+    window.onclick = (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+
+    // Form submit
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("✅ Thank you for joining! We’ll contact you soon.");
+      modal.style.display = "none";
+      form.reset();
+    });
+  </script>
+  <footer>
+  <p>&copy; 2025 Pag-asa ng Kabataan | All Rights Reserved</p>
+  <p>Follow us on 
+    <a href="https://facebook.com/PNKofficial" target="_blank">Facebook</a> • 
+    <a href="https://instagram.com/PNKofficial" target="_blank">Instagram</a>
+  </p>
+</footer>
+</body>
+</html>

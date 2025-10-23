@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pag-asa ng Kabataan</title>
+</head>
+<body>
+    <header id = "header">
+    <h1><img src="img/logo.png" alt="Pag-asa ng Kabataan Logo" style="width: 100px;height: auto;">Pag-asa ng Kabataan</h1>
+    <nav>
+        <a href="Home.html">Home</a> |
+        <a href="AboutUs.html">About</a> |
+        <a href="PO.html">Projects and Oportunities</a> |
+        <a href="Contact.html">Contact</a>
+    </nav>
+    </header>
+
+
+ <div class="contact-page">
+    <header>
+      <h1>CONTACT US</h1>
+    </header>
+
+    <section class="contact-section">
+      <div class="left-box">
+        <h2>Stay connected with PNK!</h2>
+
+        <ul class="contact-list">
+        <ul onclick="showInfo('📧 Email', 'pnk.ph@gmail.com')">
+            <strong>📧 Email:</strong> <span class="hover-link">pnk.ph@gmail.com</span>
+        </ul>
+
+        <ul onclick="showInfo('📱 Phone', '+63 912 345 6789')">
+            <strong>📱 Phone:</strong> <span class="hover-link">+63 912 345 6789</span>
+        </ul>
+
+        <ul onclick="showInfo('📘 Facebook', 'facebook.com/PNKofficial')">
+            <strong>📘 Facebook:</strong> <span class="hover-link">facebook.com/PNKofficial</span>
+        </ul>
+
+        <ul onclick="showInfo('📸 Instagram', 'instagram.com/PNKofficial')">
+            <strong>📸 Instagram:</strong> <span class="hover-link">instagram.com/PNKofficial</span>
+        </ul>
+        </ul>
+
+        <ul class="quote"><strong>“Pag-asa ng Kabataan, Pag-asa ng Bayan”</strong></ul>
+      </div>
+
+      <div class="right-box">
+        <img src="img/last.png" alt="Students Image">
+      </div>
+    </section>
+  </div>
+    <script>
+  function showInfo(title, info) {
+    alert(`${title}\n\n${info}`);
+  }
+</script>
+<footer>
+  <p>&copy; 2025 Pag-asa ng Kabataan | All Rights Reserved</p>
+  <p>Follow us on 
+    <a href="https://facebook.com/PNKofficial" target="_blank">Facebook</a> • 
+    <a href="https://instagram.com/PNKofficial" target="_blank">Instagram</a>
+  </p>
+</footer>
+</body>
+</html>
